@@ -2,14 +2,14 @@ using System;
 using System.Net;
 
 namespace PAServer {
-    class PAServer {
+    class BumpServer {
         static void Main (string[] args) {
             ServerNet server = new ServerNet ();
             string IP = "172.18.8.253";
             int Port = 9970;
             string input;
 
-            Console.WriteLine ("Patner Adventure Server  Version 1.0");
+            Console.WriteLine ("72 Bump Server  Version 1.0");
             Console.WriteLine ("Powered by Patner Adventure Studio");
             Console.WriteLine ("\tStart\t--- Start Sever");
             Console.WriteLine ("\tClose\t--- Close Sever");
