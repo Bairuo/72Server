@@ -84,9 +84,23 @@ namespace PAServer {
 
             return -1;
         }
+         public int NewRadomRoom () {
+            if (rooms == null)
+                return -1;
+
+            for (int i = 0; i < rooms.Length; i++) {
+                if (rooms[i].isFull == false) return i;
+            }
+
+            return -1;
+        }       
         public bool AddRoom (Conn conn, int questid) {
             if (questid < 0 || questid >= conns.Length) {
-                int RoomIndex = NewRoomIndex ();
+                int RoomIndex;
+                if(questid == -2)
+                    RoomIndex = NewRadomRoom();
+                else 
+                    RoomIndex = NewRoomIndex();
 
                 if (RoomIndex < 0) {
                     ClosePlayer (conn);
