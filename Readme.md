@@ -1,5 +1,8 @@
 ## 如何快速部署Server?
-### ①修改PAServer.cs，ServerNet.cs，Conn.cs
+
+### ①分离服务器相关脚本
+
+### ②修改PAServer.cs，ServerNet.cs，Conn.cs
 * 根据情况修改PAServer.cs端口
 * 修改PAServer.cs里面的显示
 * 修改ServerNet.cs `NewRoomIndex`和`AddRoom`方法
@@ -124,7 +127,6 @@
         }
 ```
 
-### ②其余文件全部复制
 ### ③阿里云服务器安全组设置
 * 开放公网入方向TCP/UDP指定端口（默认相同）
 
